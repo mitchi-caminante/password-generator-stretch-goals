@@ -1,0 +1,209 @@
+:root {
+  --checkbox-border-color: #10B981;
+  --checkbox-checked-color: #10B981;
+  --checkbox-hover-color: #white;
+  --checkbox-disabled-bg-color: #d9d9d9;
+}
+
+body {
+    margin: 0 auto;
+    padding: .5rem 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    background: url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center;
+    background-size: cover;
+    color: white;
+    font-family: "Inter", sans-serif;    
+      
+}
+.wrapper {
+    background: #1F2937;
+    margin: 40px auto 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap; 
+    align-items: stretch;
+    align-content: stretch;
+    text-align: flex-start;
+    max-width: 80%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: "Karla", sans-serif;
+    margin: 20px 10px 0 10px;
+}
+#change-el-color {
+    color: #4ADF86;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #D5D4D8;
+    margin: 20px 10px;
+      
+}
+
+.options {
+    display: flex;
+}
+
+.slidecontainer {
+    font-size: 15px;
+    background: none;
+    display: flex;
+    flex-flow: column nowrap; 
+    padding: 10px;   
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 265px;
+    height: 15px;
+    border-radius: 5px;
+    background: #10B981;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    padding: 0;
+    margin: auto;
+}  
+
+.slider:hover {
+    opacity: 0.7;
+} 
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #D5D4D8; 
+}
+
+.checkboxes {
+    margin: auto;
+    padding: 10px;
+    font-size: 15px;
+    
+}
+
+input[type="checkbox"] {
+    box-sizing: border-box;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;;
+    padding: 0;
+    border: 2px solid var(--checkbox-border-color);
+    appearance: none;
+    background-color: #10B981;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input[type="checkbox"]:checked {
+    background-size: cover;
+    padding: 2px;
+}
+
+input[type="checkbox"]:not(:disabled):checked {
+    border-color: var(--checkbox-checked-color);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 32 32" xml:space="preserve"><path style="fill: %231F2937" d="M11.941,28.877l-11.941-11.942l5.695-5.696l6.246,6.246l14.364-14.364L32,8.818"/></svg>');
+}
+
+input[type="checkbox"]:hover {
+    opacity: .7;
+}
+button {
+    background: #10B981;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 30px 10px;
+    min-width: 25vh;
+    color: inherit;
+    min-height: 6vh;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+#reset-btn {
+    width: 10%;
+    min-width: 6vh;
+    background: none;
+    border: solid 2px #10B981;
+}
+hr {
+    border-top: .5px solid;
+    width: 95%;
+    border-color: #2F3E53;
+    margin-left: 10px;
+    
+}
+
+.output-elements {
+    margin: 20px 0;
+    display: flex;
+    align-content: space-evenly;
+    flex-flow: wrap;
+    color: #55F991;
+    
+}
+
+.output-box {
+    border: solid 1px transparent;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin: 10px 10px 0;
+    background: #273549;
+    font-weight: 500;
+    width: 200px;
+    text-align: center;
+    letter-spacing: .05rem;
+    min-height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    word-break: break-all;
+}
+
+.hasContent:hover {
+    border-color: #10B981;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.hasContent {
+    cursor: pointer;
+}
+
+.message {
+    display: none;
+    margin: 10px auto;
+    max-width: 50%;
+    font-size: 16px;
+    text-align: center;
+    background-color: #10B981;
+    padding: 10px;
+    border-radius: 5px;
+    animation: xxx;
+    animation-duration: .3s;
+    
+}
+
+@keyframes xxx {
+    0% { opacity: 0; transform: translateY(50%);}
+    100% {opacity: 1; transform: translateY(0);}
+}
